@@ -1,0 +1,40 @@
+
+<!doctype> 
+<html> 
+<head> 
+  <title>starwars</title>
+  <style>body{font-family:sans-serif}</style>
+  <script type="text/javascript" src="src/jedi.js"></script> 
+  <script type="text/javascript" src="src/starwars.js"></script> 
+  <script type="text/javascript"> 
+    var jedi = [
+        {id: 1, firstname: 'Obi-Wan', lastname: 'Kenobi'},
+        {id: 2, firstname: 'Luke', lastname: 'Skywalker'},
+        {id: 3, firstname: 'Qui-Gon', lastname: 'Jinn'}
+      ];
+      
+    var sith = [
+        {id: 1, firstname: 'Darth', lastname: 'Vadar'},
+        {id: 2, firstname: 'Darth', lastname: 'Sidious'},
+        {id: 3, firstname: 'Darth', lastname: 'Maul'}
+      ];
+      
+    starwars.addJedi(jedi);  
+    starwars.addSith(sith);
+    
+    document.write('Star Wars');
+    document.write('<br />');
+    document.write(starwars.battle(1,1));
+    
+    var kenobi = starwars.selectJedi(1);
+    var vadar = starwars.selectSith(1);
+    
+    document.write('<br />');
+    document.write(kenobi.Name().concat(' uses ', kenobi.LightSaber()));
+    document.write('<br />');
+    document.write(vadar.Name().concat(' uses ', vadar.ForceLightning()));
+  </script> 
+</head> 
+<body> 
+</body> 
+</html> 

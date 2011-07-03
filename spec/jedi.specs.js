@@ -1,65 +1,61 @@
-describe("My name is obi.one", function() {
+describe("My name is Obi-Wan Kenobi", function() {
   var jedi;
   var firstname;
   var surname;
 
   beforeEach(function() {
-	firfirstnamesname = "obi.one";
-	surname = "kenobi";
+	firstname = "Obi-Wan";
+	surname = "Kenobi";
 	jedi = new Jedi(firstname, surname);
   });
-
-  it("i am the master", function() {
-    expect(jedi.Speak()).toEqual('My name is ' + firstname + ' ' + surname);
-  });
-
-  describe("when i win", function() {
+  
+  describe("when i use force lightning", function() {
     beforeEach(function() {
-      jedi.Won();
+      jedi.ForceLightning();
     });
 
-    it("i am a jedi knight..", function() {
-      expect(jedi.Defeated).toBeTruthy();
-    });
-  });
-
-  describe("when i am defeated", function() {
-    beforeEach(function() {
-      jedi.Defeated();
-    });
-
-    it("you cannot defeat me; if i die then I will become more powerful than you can possibly imagine", function() {
-      expect(jedi.Defeated).toBeTruthy();
-    });
-  });
-
-  describe("when i fly", function() {
-    beforeEach(function() {
-      jedi.Fly();
-    });
-
-    it("you cannot catch me!", function() {
-      expect(jedi.isFlying).toBeTruthy();
+    it("electric!", function() {
+      expect(jedi.isUsingForceLightning).toBeTruthy();
     });
   });
   
-  describe("when i use the force", function() {
+  describe("when i use force lightning", function() {
     beforeEach(function() {
-      jedi.Force();
+      jedi.ForceLightning();
     });
 
-    it("may the force be with you; always", function() {
-      expect(jedi.isUsingForce).toBeTruthy();
+    it("electric!", function() {
+      expect(jedi.isUsingForceLightning).toBeTruthy();
+    });
+  });
+
+  describe("when i levitate", function() {
+    beforeEach(function() {
+      jedi.Levitate();
+    });
+
+    it("you cannot catch me!", function() {
+      expect(jedi.isInTheAir).toBeTruthy();
+    });
+  });
+  
+  describe("when i use a mind trick", function() {
+    beforeEach(function() {
+      jedi.MindTrick();
+    });
+
+    it("these are the not the scripts you are looking for", function() {
+      expect(jedi.isUsingMindTrick).toBeTruthy();
     });
   });
   
   describe("when i strike with my lightsaber", function() {
     beforeEach(function() {
-      jedi.Lightsaber();
+      jedi.LightSaber();
     });
 
     it("zoooonnn zoon zoooonn zooonnnnn zoon", function() {
-      expect(jedi.isUsingLightsaber).toBeTruthy();
+      expect(jedi.isUsingLightSaber).toBeTruthy();
     });
   });
 });
